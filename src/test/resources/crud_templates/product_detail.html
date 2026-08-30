@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background-color: #f4f4f9; color: #333; }
+        .details-card { background: white; padding: 2rem; border-radius: 8px; max-width: 500px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin-top: 0; color: #2c3e50; }
+        .price { font-size: 1.5rem; color: #e74c3c; font-weight: bold; }
+        .actions { margin-top: 2rem; display: flex; gap: 1rem; }
+        .btn { padding: 0.5rem 1rem; color: white; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
+        .btn-danger { background: #e74c3c; }
+        .btn-danger:hover { background: #c0392b; }
+        .btn-secondary { background: #95a5a6; }
+        .btn-secondary:hover { background: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <div class="details-card">
+        <h1>{{ product.name }}</h1>
+        <p class="price">${{ product.price }}</p>
+        <p>{{ product.description }}</p>
+        
+        <div class="actions">
+            <form method="POST" action="/products/{{ product.id }}/delete" style="margin: 0;">
+                <button type="submit" class="btn btn-danger">Delete Product</button>
+            </form>
+            <a href="/products" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

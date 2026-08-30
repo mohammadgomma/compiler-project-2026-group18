@@ -1,0 +1,51 @@
+Cleaning compiled files...
+Generating ANTLR lexers and parsers...
+Compiling Java main sources...
+Compiling Java tests...
+Running JUnit tests...
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+
+Test run finished after 250 ms
+[         8 containers found      ]
+[         0 containers skipped    ]
+[         8 containers started    ]
+[         0 containers aborted    ]
+[         8 containers successful ]
+[         0 containers failed     ]
+[        26 tests found           ]
+[         0 tests skipped         ]
+[        26 tests started         ]
+[         0 tests aborted         ]
+[        26 tests successful      ]
+[         0 tests failed          ]
+
+Generating Flask CRUD application...
+Processing Python file: src/test/resources/crud_app.py
+
+Generating project in generated/crud_flask_app ...
+Compilation and Generation Successful!
+Checking generated Python syntax...
+Installing Python test dependencies...
+Running Flask and CLI acceptance tests...
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-4.4.0-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'cov': '7.0.0', 'ddtrace': '4.4.0', 'json-report': '1.5.0', 'metadata': '3.1.1', 'asyncio': '1.3.0', 'Faker': '40.1.2', 'anyio': '4.13.0'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/compiler_final_work
+plugins: cov-7.0.0, ddtrace-4.4.0, json-report-1.5.0, metadata-3.1.1, asyncio-1.3.0, Faker-40.1.2, anyio-4.13.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 8 items
+
+test_flask_app.py::test_crud_lifecycle PASSED                            [ 12%]
+test_flask_app.py::test_missing_required_form_data_returns_400_without_consuming_id PASSED [ 25%]
+test_cli_acceptance.py::test_missing_template_fails_with_location_and_no_output PASSED [ 37%]
+test_cli_acceptance.py::test_valid_standalone_css_is_validated_and_generated_under_static PASSED [ 50%]
+test_cli_acceptance.py::test_invalid_standalone_css_is_rejected PASSED   [ 62%]
+test_cli_acceptance.py::test_bundled_sample_apps_compile_with_isolated_template_directories[test1_app.py-test1_templates] PASSED [ 75%]
+test_cli_acceptance.py::test_bundled_sample_apps_compile_with_isolated_template_directories[test2_app.py-test2_templates] PASSED [ 87%]
+test_cli_acceptance.py::test_bundled_sample_apps_compile_with_isolated_template_directories[test3_app.py-test3_templates] PASSED [100%]
+
+============================== 8 passed in 5.74s ===============================
+Build and all tests passed successfully.

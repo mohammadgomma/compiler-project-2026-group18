@@ -1,0 +1,14 @@
+Compiler Project 2026 Delivery Information
+
+Group number: 18
+GitHub repository: https://github.com/mohammadgomma/compiler-project-2026-group18
+Student 1: فردوس محمد هديه
+Student 2: محمد فهد جمعه
+Student 3: حسن منذر يوسف
+Student 4: احمد عبد المجيد الفروان
+Student 5: شاها اسماعيل جاويش
+
+Final verification:
+- JUnit: 26/26 passed
+- Python acceptance tests: 8/8 passed
+- Generated Flask app py_compile: passed

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background-color: #f4f4f9; color: #333; }
+        h1 { color: #2c3e50; }
+        .product-card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        a.btn { display: inline-block; padding: 0.5rem 1rem; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+        a.btn:hover { background: #2980b9; }
+        .actions { margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <a class="btn" href="/products/add">Add New Product</a>
+    <div class="actions">
+        {% for product in products %}
+        <div class="product-card">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ${{ product.price }}</p>
+            <a class="btn" href="/products/{{ product.id }}">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

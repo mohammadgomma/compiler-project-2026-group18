@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Details</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div>{{ product.image }}</div>
+            <div>
+                <div>{{ product.name }}</div>
+                <div>{{ product.price }}</div>
+                <div>{{ product.description }}</div>
+            </div>
+        </div>
+
+        <div>Specifications</div>
+        <ul>
+            {% for spec in product.specs %}
+            <li>{{ spec }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
